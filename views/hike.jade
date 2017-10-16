@@ -1,0 +1,49 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form(action="/hikes", method="post" name="addHike")
+    table(border="1")
+      tr
+        td Your Name
+        td
+          input(name="hike[name]", type="textbox")
+      tr
+        td Location
+        td
+          input(name="hike[location]", type="textbox")
+      tr
+        td Distance
+        td
+          input(name="hike[distance]", type="textbox")
+      tr
+        td Weather
+        td
+          input(name="hike[weather]", type="radio", value="Good")
+          | Good
+          input(name="hike[weather]", type="radio", value="Bad")
+          | Bad
+          input(name="hike[weather]", type="radio", value="Seattle", checked)
+          | Seattle
+      tr
+        td(colspan="2")
+          input(type="submit", role="submit" value="Create")
+
+  div
+    h3 Hikes
+    table(border="1")
+      tr
+        td Date
+        td Name
+        td Location
+        td Distance
+        td Weather
+      each hike in hikes
+        tr
+          td #{hike.hikeDate}
+          td #{hike.name}
+          td #{hike.location}
+          td #{hike.distance}
+          td #{hike.weather}
