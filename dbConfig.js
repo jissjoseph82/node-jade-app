@@ -10,9 +10,9 @@ if (params.auth) {
 }
 
 module.exports = {
-  user: auth[0],
-  password: auth[1],
-  host: params.hostname,
-  port: params.port,
+  user: process.env.RDS_USER || auth[0],
+  password: process.env.RDS_PASSWORD || auth[1],
+  host: process.env.RDS_HOSTNAME || params.hostname,
+  port: process.env.RDS_PORT || params.port,
   database: params.pathname.split('/')[1],
 };
