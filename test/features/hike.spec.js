@@ -9,7 +9,7 @@ const Hike = require('../../models/hike');
 describe('Hike', () => {
      it('User can create a new hike', async () => {
         const hikeParams = {
-             name: 'Wilson',
+             name: 'Mark',
             distance: '50 km',
             location: 'Cochin',
             weather: 'Good',
@@ -20,7 +20,7 @@ describe('Hike', () => {
           .get('/hikes')
           .send()
           .expect(200);
-        res.text.should.match(/Wilson/);
+        res.text.should.match(/Mark/);
         res.text.should.match(/Cochin/);
         res.text.should.match(/Good/);
       });    
