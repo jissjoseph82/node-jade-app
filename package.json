@@ -36,6 +36,7 @@
     "postgrator-cli": "^0.1.0",
     "should": "^13.1.2",
     "underscore": "^1.8.3",
+    "dotenv": "^4.0.0",
     "validator": "^7.1.0"
   },
   "devDependencies": {
