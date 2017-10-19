@@ -6,9 +6,9 @@ const cors = require('cors');
 const express = require('express');
 const logger = require('morgan');
 const path = require('path');
-/*if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
-}*/
+}
 
 const verifyLoggedInUser = require('./lib/verifyLoggedInUser');
 
