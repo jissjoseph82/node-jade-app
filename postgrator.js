@@ -1,8 +1,8 @@
 'use strict';
-/*if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
-}*/
-if (process.env.NODE_ENV === 'test') {
+}
+if (process.env.NODE_ENV == 'test') {
   process.env.DATABASE_URL = process.env.TEST_DATABASE_URL;
 }
 let postgrator = require('postgrator');
