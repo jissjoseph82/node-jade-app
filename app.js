@@ -20,7 +20,7 @@ let server;
 let debug;
 let app = express();
 
-if (process.env.NODE_ENV !== 'production') {
+/*if (process.env.NODE_ENV !== 'production') {
   debug = require('debug')('mock-project-server:server');
   const http = require('http');
   const port = normalizePort(process.env.PORT || '3001');
@@ -32,7 +32,7 @@ if (process.env.NODE_ENV !== 'production') {
   server.on('error', onError);
   server.on('listening', onListening);
   console.log(`Server listening on port: ${port}`);
-}
+}*/
 
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
