@@ -10,7 +10,7 @@
     "db:seed": "for file in ./seeds/*.js; do node $file; done",
     "db:seedForWindows": "for %f in (./seeds/*) do node ./seeds/%f",
     "precommit": "lint-staged",
-    "start": "node app.js",
+    "start": "node ./bin/www",
     "test": "mocha --recursive --timeout 30000",
     "test:watch": "mocha --recursive --watch"
   },
