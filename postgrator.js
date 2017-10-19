@@ -10,6 +10,7 @@ let postgrator = require('postgrator');
 postgrator.setConfig({
   migrationDirectory: __dirname + '/migrations',
   driver: 'pg',
+  ssl: true,
   connectionString: process.env.DATABASE_URL,
 });
 
