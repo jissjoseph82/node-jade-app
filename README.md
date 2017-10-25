@@ -1,4 +1,4 @@
-#### README
+## README
 
 ## How do you get this up and running?
 Will be updated shortly.
